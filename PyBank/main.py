@@ -50,6 +50,15 @@ max_profit_change_month = month_list[profit_change_list.index(max_profit_change)
 min_profit_change = min(profit_change_list)
 min_profit_change_month = month_list[profit_change_list.index(min_profit_change) + 1]
 
+ #Print results
+    print("Financial Analysis")
+    print("------------------")
+    print(f"Total Months: {total_months}")
+    print(f"Total: ${total_profit}")
+    print(f"Average Change: ${round(avg_change, 2)}")
+    print(f"Greatest Increase in Profits: {max_month} (${greatest_increase})")
+    print(f"Greatest Decrease in Profits: {min_month} (${greatest_decrease})")
+
 # Open the output file and write the analysis results to it
 with open(output_file_path, "w") as output_file:
     output_file.write("Financial Analysis\n")
